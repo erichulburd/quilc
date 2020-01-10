@@ -197,7 +197,8 @@ An instruction is unitary if it is of type APPLICATION, whether that be INSTR it
              (error "CONTROLLED requires at least one select qubit in ~/quil:instruction-fmt/." instr))
 
            (destructuring-bind (select-qubit . data-qubits) arguments
-             ;; We call this select and data qubits following the naming scheme of Shende et al.
+             ;; We call these select and data qubits following the naming
+             ;; scheme of Shende et al.
              (when (member select-qubit data-qubits :test #'equalp)
                (error "CONTROLLED cannot be applied when the select qubit is among the data qubits ~
                        in ~/quil:instruction-fmt/" instr))

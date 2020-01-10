@@ -1157,7 +1157,7 @@ consists of a DAGGER-OPERATOR acting on a NAMED-OPERATOR."
 An operator is considered to be a simple controlled application if it
 consists of a CONTROLLED-OPERATOR acting on a NAMED-OPERATOR."
   (adt:match operator-description od
-    ((controlled-operator dod) (plain-operator-p dod))
+    ((controlled-operator cod) (plain-operator-p cod))
     (_ nil)))
 
 (defclass application (instruction)
